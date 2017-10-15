@@ -55,7 +55,7 @@ class ResepController extends Controller
         $resep->bayar = $request->bayar;
         $resep->kembali = $request->kembali;
         $resep->save();
-        return redirect('resep');
+        return redirect('/apotik/resep');
 
     }
 
@@ -112,7 +112,7 @@ class ResepController extends Controller
         $resep->bayar = $request->bayar;
         $resep->kembali = $request->kembali;
         $resep->save();
-        return redirect('resep');
+        return redirect('/apotik/resep');
 
     }
 
@@ -126,6 +126,6 @@ class ResepController extends Controller
     {
         $resep = Resep::find($id);
         $resep ->delete();
-        return redirect('resep');
+        return redirect('/apotik/resep');
     }
 }

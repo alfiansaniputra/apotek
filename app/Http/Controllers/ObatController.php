@@ -51,7 +51,7 @@ class ObatController extends Controller
         $obat->harga_obat = $request->harga_obat;
         $obat->jumlah_obat = $request->jumlah_obat;
         $obat->save();
-        return redirect('obat');
+        return redirect('/apotik/obat');
 
     }
 
@@ -104,7 +104,7 @@ class ObatController extends Controller
         $obat->harga_obat = $request->harga_obat;
         $obat->jumlah_obat = $request->jumlah_obat;
         $obat->save();
-        return redirect('obat');
+        return redirect('/apotik/obat');
 
     }
 
@@ -118,6 +118,6 @@ class ObatController extends Controller
     {
         $obat = Obat::find($id);
         $obat ->delete();
-        return redirect('obat');
+        return redirect('/apotik/obat');
     }
 }

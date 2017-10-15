@@ -1,14 +1,48 @@
-<h1> EDIT </h1>
-<form action="/detail/{{$detail->id}}" method="post">
-    
-    <input type="text" value="{{$detail->nomorresep_id}}" name="nomorresep_id" value="" placeholder="nomorresep_id"><br>
-    <input type="text" value="{{$detail->kode_obat_id}}" name="kode_obat_id" value="" placeholder="kode_obat_id"><br>
-    <input type="text" value="{{$detail->harga}}" name="harga" value="" placeholder="harga"><br>
-    <input type="text" value="{{$detail->dosis}}" name="dosis" value="" placeholder="dosis"><br>
-    <input type="text" value="{{$detail->subtotal}}" name="subtotal" value="" placeholder="subtotal"><br>
+@extends('template.template')
+@section('content')
 
-    <input type="submit" value="edit">
+<div class="col-md-10 col-md-offset-1" style="padding: 0px 80px;">
+    <form class="form-horizontal" action="/apotik/detail/{{$detail->id}}" method="post">
+                <div class="form-group">
+                  <label  class="col-sm-2 control-label">Nomor Resep</label>
+                  <div class="col-sm-10">
+                    <input name="nomorresep_id" value="{{$detail->nomorresep_id}}" type="text" class="form-control"  placeholder="nomorresep_id" >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label  class="col-sm-2 control-label">Kode Obat</label>
+                  <div class="col-sm-10">
+                    <input name="kode_obat_id" value="{{$detail->kode_obat_id}}" type="text" class="form-control"  placeholder="kode_obat_id" >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label  class="col-sm-2 control-label">Harga</label>
+                  <div class="col-sm-10">
+                    <input name="harga" value="{{$detail->harga}}" type="text" class="form-control"  placeholder="harga" >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label  class="col-sm-2 control-label">Dosis</label>
+                  <div class="col-sm-10">
+                    <input name="dosis" value="{{$detail->dosis}}" type="text" class="form-control"  placeholder="dosis" >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label  class="col-sm-2 control-label">Subtotal</label>
+                  <div class="col-sm-10">
+                    <input name="subtotal" value="{{$detail->subtotal}}" type="text" class="form-control"  placeholder="subtotal" >
+                  </div>
+                </div>
+                <center>
+                          <a href="/apotik/detail" type="reset" class="btn btn-danger">Back</a>
+                          <button type="reset" class="btn btn-primary">Clear Form</button>
+                          <button type="submit"  value="edit" class="btn btn-info">Submit</button>
+                </center>
     <input type="hidden" value="{{ csrf_token() }}" name="_token">
     <input type="hidden" value="put" name="_method">
-</form>
+    </form>
+</div>
 
+
+
+@stop

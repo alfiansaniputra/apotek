@@ -49,7 +49,7 @@ class DetailController extends Controller
         $detail->dosis = $request->dosis;
         $detail->subtotal = $request->subtotal;
         $detail->save();
-        return redirect('detail');
+        return redirect('/apotik/detail');
 
     }
 
@@ -100,7 +100,7 @@ class DetailController extends Controller
         $detail->dosis = $request->dosis;
         $detail->subtotal = $request->subtotal;
         $detail->save();
-        return redirect('detail');
+        return redirect('/apotik/detail');
     }
 
     /**
@@ -113,6 +113,6 @@ class DetailController extends Controller
     {
         $detail = Detail::find($id);
         $detail ->delete();
-        return redirect('detail');
+        return redirect('/apotik/detail');
     }
 }

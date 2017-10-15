@@ -51,7 +51,7 @@ class PasienController extends Controller
         $pasien->umur_psn = $request->umur_psn;
         $pasien->telepon_psn = $request->telepon_psn;
         $pasien->save();
-        return redirect('pasien');
+        return redirect('/apotik/pasien');
 
     }
 
@@ -104,7 +104,7 @@ class PasienController extends Controller
         $pasien->umur_psn = $request->umur_psn;
         $pasien->telepon_psn = $request->telepon_psn;
         $pasien->save();
-        return redirect('pasien');
+        return redirect('/apotik/pasien');
 
     }
 
@@ -118,6 +118,6 @@ class PasienController extends Controller
     {
         $pasien = Pasien::find($id);
         $pasien ->delete();
-        return redirect('pasien');
+        return redirect('/apotik/pasien');
     }
 }

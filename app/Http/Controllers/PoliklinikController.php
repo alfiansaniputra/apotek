@@ -43,7 +43,7 @@ class PoliklinikController extends Controller
         $poliklinik->id_kode_plk = $request->id_kode_plk;
         $poliklinik->nama_plk = $request->nama_plk;
         $poliklinik->save();
-        return redirect('poliklinik');
+        return redirect('/apotik/poliklinik');
 
     }
 
@@ -88,7 +88,7 @@ class PoliklinikController extends Controller
         $poliklinik->id_kode_plk = $request->id_kode_plk;
         $poliklinik->nama_plk = $request->nama_plk;
         $poliklinik->save();
-        return redirect('poliklinik');
+        return redirect('/apotik/poliklinik');
 
     }
 
@@ -102,6 +102,6 @@ class PoliklinikController extends Controller
     {
         $poliklinik = Poliklinik::find($id);
         $poliklinik ->delete();
-        return redirect('poliklinik');
+        return redirect('/apotik/poliklinik');
     }
 }
